@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST["email"];
 
     try {
-        require_once "dbh.inc.php";
+        require_once __DIR__ . "/dbh.inc.php";
 
         $query = "UPDATE users SET username = :username, passcode = :pword, email = :email WHERE id = 1;";
 

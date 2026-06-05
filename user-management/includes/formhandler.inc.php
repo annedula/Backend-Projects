@@ -4,9 +4,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
     $pword = $_POST["password"];
     $email = $_POST["email"];
-
+    
     try {
-        require_once "dbh.inc.php";
+        require_once __DIR__ . "/dbh.inc.php";
 
         $query = "INSERT INTO users (username, passcode, email) VALUES (:username, :pword, :email);";
 

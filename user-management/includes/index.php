@@ -30,7 +30,12 @@
         <input type="text" name="password" placeholder="Password">
         <button class="delete-btn">Delete</button>
     </form>
-    
-   
+
+    <form class="searchform" action="./search.php" method="post">
+        <label for="search">Search for user:</label>
+        <input type="text" id="search" name="usersearch" placeholder="Search">
+        <button class="search-btn">Search</button>
+    </form>
+
 </body>
 </html>
