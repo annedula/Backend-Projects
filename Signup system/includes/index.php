@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Signup system/css/main.css">
+    <title>PHP Signup System</title>
+</head>
+<body>
+
+    <h1>Signup</h1>
+
+    <form action="/Signup system/includes/signup.inc.php" method="get">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="pwd" placeholder="Password" required>
+        <input type="text" name="email" placeholder="Email">
+        <button class="signup-btn">Signup</button>
+    </form>
+
+    <h1>Login</h1>
+   
+    <form action="/Signup system/includes/login.inc.php" method="post">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="pwd" placeholder="Password" required>
+        <button class="login-btn">Login</button>
+    </form>
+</body>
+</html>
