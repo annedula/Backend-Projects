@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/config_session.inc.php';
+require_once __DIR__ . '/signup_view.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,5 +30,10 @@
         <input type="text" name="pwd" placeholder="Password">
         <button class="login-btn">Login</button>
     </form>
+    <?php
+
+    check_signup_errors(); 
+
+    ?>
 </body>
 </html>
