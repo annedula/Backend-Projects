@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
-    $pword = $_POST["password"];
+    $pword = $_POST["passcode"];
     $email = $_POST["email"];
     
     try {
@@ -12,8 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $stmt = $pdo->prepare($query);
 
+        $options = [
+        'cost' => 12
+        ];
+
+        $hashPwd = password_hash($pword, PASSWORD_BCRYPT, $options);
+
         $stmt->bindParam(":username", $username);
-        $stmt->bindParam(":pword", $pword);
+        $stmt->bindParam(":pword", $hashPwd);
         $stmt->bindParam(":email", $email);
 
         $stmt->execute();
