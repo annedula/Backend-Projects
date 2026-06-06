@@ -13,7 +13,7 @@
 
     <form action="/Signup system/includes/signup.inc.php" method="get">
         <input type="text" name="username" placeholder="Username">
-        <input type="text" name="pwd" placeholder="Password" required>
+        <input type="text" name="pwd" placeholder="Password">
         <input type="text" name="email" placeholder="Email">
         <button class="signup-btn">Signup</button>
     </form>
@@ -22,7 +22,7 @@
    
     <form action="/Signup system/includes/login.inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
-        <input type="text" name="pwd" placeholder="Password" required>
+        <input type="text" name="pwd" placeholder="Password">
         <button class="login-btn">Login</button>
     </form>
 </body>

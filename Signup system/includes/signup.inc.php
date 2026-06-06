@@ -13,6 +13,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once "signup_view.inc.php";
         require_once "signup_controller.inc.php";
         
+        // ERROR HANDLERS
+        if (is_input_empty($username, $pwd, $email)) {
+            
+        }
+        if (is_email_invalid($email)) {
+            
+        }
+        else {
+
+        }
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
