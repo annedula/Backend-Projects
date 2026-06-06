@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/config_session.inc.php';
-require_once __DIR__ . '/signup_view.inc.php';
+require_once 'includes/config_session.inc.php';
+require_once 'includes/signup_view.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ require_once __DIR__ . '/signup_view.inc.php';
 
     <h1>Signup</h1>
 
-    <form action="/Signup system/includes/signup.inc.php" method="get">
+    <form action="./includes/signup.inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="text" name="pwd" placeholder="Password">
         <input type="text" name="email" placeholder="Email">
@@ -25,14 +25,14 @@ require_once __DIR__ . '/signup_view.inc.php';
 
     <h1>Login</h1>
    
-    <form action="/Signup system/includes/login.inc.php" method="post">
+    <form action="/signup-system/includes/login.inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="text" name="pwd" placeholder="Password">
         <button class="login-btn">Login</button>
     </form>
     <?php
 
-    check_signup_errors(); 
+    check_signup_errors();
 
     ?>
 </body>

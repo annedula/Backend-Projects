@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once __DIR__ . "/dbh.inc.php";
         require_once __DIR__ . "/signup_model.inc.php";
         require_once __DIR__ . "/signup_view.inc.php";
-        require_once __DIR__ .  "/signup_controller.inc.php";
+        require_once __DIR__ . "/signup_controller.inc.php";
         
         // ERROR HANDLERS
         $errors = [];
@@ -29,18 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["empty_used"] = "Email already registered";  
         }
 
-        require_once __DIR__ . "/config_session.inc.php";
+        require_once 'config_session.inc.php';
 
         if ($errors) {
-            $_SESSION["error_signup"] = $errors;
-            header("Location: ./index.php");
+            $_SESSION["errors_signup"] = $errors;
+            header("Location: ../index.php");
         }
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
 
 } else {
-    header("Location:  ./index.php");
+    header("Location:  ../index.php");
     die();
 }
 
