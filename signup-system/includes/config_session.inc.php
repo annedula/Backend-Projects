@@ -13,7 +13,7 @@ session_set_cookie_params([
 
 session_start();
 
-if ($_SESSION["user_Id"] === "POST") {
+if ($_SESSION["userId"] === "POST") {
     if (!isset($_SESSION["last_regeneration"])) {
         regenerate_session_id_loggedIn();
     } else {
@@ -36,7 +36,7 @@ if ($_SESSION["user_Id"] === "POST") {
 function regenerate_session_id() {
     session_regenerate_id(true);
 
-    $userId = $_SESSION["user_Id"];
+    $userId = $_SESSION["userId"];
 
     $newSessionId = session_create_id();
     $sessionId = $newSessionId . "_" . $userId;
