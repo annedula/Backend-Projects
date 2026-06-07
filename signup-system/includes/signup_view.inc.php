@@ -16,6 +16,7 @@ function signup_inputs() {
         echo '<input type="text" name="email" placeholder="Email">';
     }
     echo '<input type="text" name="pwd" placeholder="Password">';
+    unset($_SESSION["signup_data"]);
 }
 
 function check_signup_errors() {
