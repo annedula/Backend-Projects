@@ -33,7 +33,7 @@ require_once 'includes/login_view.inc.php';
 
     <h1>Login</h1>
    
-    <form action="/signup-system/includes/login.inc.php" method="post">
+    <form action="./includes/login.inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="text" name="pwd" placeholder="Password">
         <button class="login-btn">Login</button>
