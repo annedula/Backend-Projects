@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function get_user(object $pdo, string $username, string $pwd) {
+function get_user(object $pdo, string $username) {
     $query = "SELECT * FROM members WHERE username = :username;";
 
     $stmt = $pdo->prepare($query);
