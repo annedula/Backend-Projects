@@ -15,6 +15,12 @@ require_once 'includes/login_view.inc.php';
 </head>
 <body>
 
+    <h3>
+        <?php
+        display_username();
+        ?>
+    </h3>
+
     <h1>Signup</h1>
 
     <form action="./includes/signup.inc.php" method="post">
