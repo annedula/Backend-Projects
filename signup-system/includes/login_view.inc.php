@@ -6,7 +6,7 @@ function display_username(){
     if (isset($_SESSION["userId"])) {
         echo "You are logged in As" . $_SESSION["user_username"];
     } else {
-        echo "You are not logged in";
+        echo "Sign up Now!";
     }
 }
 
