@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 function get_username(object $pdo, string $username) {
-    $query = "SELECT username FROM members WHERE username = :username;";
+    $query = "SELECT username FROM users WHERE username = :username;";
 
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":username", $username);
@@ -14,7 +14,7 @@ function get_username(object $pdo, string $username) {
 }
 
 function get_email(object $pdo, string $email) {
-    $query = "SELECT username FROM members WHERE username = :email;";
+    $query = "SELECT username FROM users WHERE username = :email;";
 
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":email", $email);
@@ -26,7 +26,7 @@ function get_email(object $pdo, string $email) {
 
 function set_user(object $pdo, string $username, string $pwd, string $email)
 {
-    $query = "INSERT INTO members (username, pwd, email) VALUES (:username, :pwd, :email);";
+    $query = "INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);";
 
     $options = [
         'cost' => 12

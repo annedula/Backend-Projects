@@ -38,8 +38,6 @@ require_once 'includes/login_view.inc.php';
         <input type="text" name="pwd" placeholder="Password">
         <button class="login-btn">Login</button>
     </form>
-
-    <button>Logout</button>
    
     <?php
     check_login_errors();
